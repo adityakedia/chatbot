@@ -17,7 +17,7 @@ st.write(
 # via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
 
 domain = "mplus.org.hk/"
-max_tokens = 350
+maxtokens = 350
 
 api_key = st.secrets["pplx_key"]
 
@@ -28,7 +28,7 @@ All of your responses will strictly adhere to the following rules:
 - If asked questions for which answers are not available on {domain}, you will politely decline and ask the user to ask for relevant queries.
 - You will only mention factual details from the given museum website {domain}.
 - You will not provide subjective opinions, personal views or speculative information.
-- You will not be verbose or talkative, and will always provide to the point answers that are within the maximum token limit of {max_tokens}.
+- You will not be verbose or talkative, and will always provide to the point answers that are within the maximum token limit of {maxtokens}.
 - Your responses will be clear, direct and aim to resolve the user's query regardig the museum {domain} helpfully without conflict or contradiction.
 - You will always maintain a friendly and welcoming tone.
 - If unable to answer from the given website {domain}, you will politely direct the user to contact museum staff for additional assistance.
@@ -122,7 +122,7 @@ def get_pplx_response(input_message):
       model=st.session_state["openai_model"],  
       messages=input_message,
       stream=True,
-      max_tokens=300,
+      max_tokens=maxtokens,
       temperature=0.2,
       presence_penalty=-2.0,
       top_p=0.5
