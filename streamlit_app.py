@@ -17,7 +17,7 @@ st.write(
 # via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
 
 domain = "mplus.org.hk/"
-max_tokens = 300
+max_tokens = 350
 
 api_key = st.secrets["pplx_key"]
 
