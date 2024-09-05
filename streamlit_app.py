@@ -16,7 +16,7 @@ st.write(
 # Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
 # via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
 
-domain = "mplus.org.hk/"
+domain = "www.mplus.org.hk/"
 maxtokens = 500
 
 api_key = st.secrets["pplx_key"]
