@@ -2,7 +2,7 @@ import streamlit as st
 import os
 from openai import OpenAI
 import requests, json
-from litellm import completion
+#from litellm import completion
 
 
 
